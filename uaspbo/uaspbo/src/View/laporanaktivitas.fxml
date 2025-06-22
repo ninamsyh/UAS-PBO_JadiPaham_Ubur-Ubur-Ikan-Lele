@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.LaporanAktivitasController"
+            style="-fx-background-color: #f0f8ff;">
+
+    <!-- Judul -->
+    <top>
+        <Label text="Laporan Aktivitas Siswa"
+               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #4682B4;"
+               BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+        </Label>
+    </top>
+
+    <!-- Tabel Nilai -->
+    <center>
+        <VBox spacing="10" alignment="TOP_CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <TableView fx:id="tableView" prefHeight="400" prefWidth="600"
+                       style="-fx-border-color: #4682B4; -fx-border-width: 2;">
+                <columns>
+                    <TableColumn fx:id="usernameColumn" text="Username" prefWidth="300"/>
+                    <TableColumn fx:id="nilaiColumn" text="Nilai (%)" prefWidth="300"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <!-- Tombol Download -->
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Button fx:id="downloadButton"
+                    text="📥 Download PDF"
+                    onAction="#handleDownload"
+                    style="-fx-background-color: #4682B4; -fx-text-fill: white; -fx-font-size: 14px;"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

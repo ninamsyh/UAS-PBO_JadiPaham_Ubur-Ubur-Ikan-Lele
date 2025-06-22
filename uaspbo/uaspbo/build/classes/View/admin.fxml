@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.AdminController">
+
+    <!-- HEADER -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #2682B4;">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Manajemen Siswa"
+                   style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+
+    <!-- TABEL -->
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <TableView fx:id="tabelSiswa" prefHeight="250">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="colUsername" text="Username" prefWidth="150"/>
+                    <TableColumn fx:id="colFoto" text="Foto" prefWidth="150"/>
+                    <TableColumn fx:id="colAksi" text="Aksi" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <!-- FORM -->
+    <bottom>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <TitledPane text="Form Tambah Siswa" expanded="true" collapsible="false">
+                <content>
+                    <VBox spacing="10">
+                        <padding>
+                            <Insets top="10" right="10" bottom="10" left="10"/>
+                        </padding>
+
+                        <TextField fx:id="usernameField" promptText="Username"/>
+                        <PasswordField fx:id="passwordField" promptText="Password"/>
+
+                        <HBox spacing="10">
+                            <TextField fx:id="fotoField" promptText="Path Foto" editable="false"/>
+                            <Button text="Pilih Foto" onAction="#pilihFoto"/>
+                        </HBox>
+
+                        <ImageView fx:id="previewFoto" fitHeight="100" fitWidth="100"/>
+
+                        <HBox spacing="10">
+                            <Button fx:id="tambahButton" text="Tambah"
+                                    onAction="#tambahSiswa"
+                                    style="-fx-background-color: #2682B4; -fx-text-fill: white;"/>
+                            <Button fx:id="hapusButton" text="Hapus" onAction="#hapusSiswa"/>
+                            <Button fx:id="resetButton" text="Reset" onAction="#resetForm"/>
+                        </HBox>
+                    </VBox>
+                </content>
+            </TitledPane>
+        </VBox>
+    </bottom>
+
+</BorderPane>

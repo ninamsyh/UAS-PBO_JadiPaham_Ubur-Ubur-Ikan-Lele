@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.LaporanController"
+            style="-fx-background-color: #F8F9FA;">
+    <center>
+        <VBox spacing="15" alignment="CENTER" style="-fx-padding: 20;">
+            <Label text="Laporan Nilai Siswa"
+                   style="-fx-font-size: 20px; -fx-text-fill: #4682B4; -fx-font-weight: bold;"/>
+            <TableView fx:id="tableView" prefWidth="400">
+                <columns>
+                    <TableColumn fx:id="materiColumn" text="Materi" prefWidth="200"/>
+                    <TableColumn fx:id="nilaiColumn" text="Nilai (%)" prefWidth="200"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600" prefWidth="800" style="-fx-background-color: #f0f8ff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashboardSiswaController">
+
+    <children>
+
+        <!-- Judul dan Foto Profil -->
+        <Label layoutX="30.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #4682b4;" text="Dashboard Siswa" />
+
+        <ImageView fx:id="profileImage" fitHeight="40" fitWidth="40" layoutX="230.0" layoutY="18.0" pickOnBounds="true" style="-fx-background-radius: 20; -fx-effect: dropshadow(gaussian, gray, 2, 0.2, 0, 1);" />
+
+        <Button fx:id="logoutButton" layoutX="670.0" layoutY="20.0" style="-fx-background-color: transparent; -fx-text-fill: #4682b4; -fx-font-weight: bold;" text="Keluar" />
+
+        <!-- Statistik Ringkas di bawah judul -->
+        <VBox fx:id="siswaStatsBox" layoutX="30" layoutY="70" prefWidth="300" spacing="8">
+            <children>
+                <Label style="-fx-font-size: 18px; -fx-text-fill: #4682b4; -fx-font-weight: bold;" text="📈 Statistik Belajar Anda" />
+                <Label fx:id="lblMateriDiselesaikan" style="-fx-text-fill: #333;" text="Materi selesai: 0" />
+                <Label fx:id="lblKuisDikerjakan" style="-fx-text-fill: #333;" text="Kuis dikerjakan: 0" />
+                <Label fx:id="lblNotifikasi" maxWidth="280" style="-fx-text-fill: #555;" text="Notifikasi: Tidak ada notifikasi baru." wrapText="true" />
+            </children>
+        </VBox>
+
+        <!-- Pie Chart: Progress Materi di samping statistik -->
+        <PieChart fx:id="chartProgresMateri" layoutX="270.0" layoutY="70.0" prefHeight="180" prefWidth="380" title="Progress Materi" />
+
+        <!-- Tombol Navigasi dipindahkan ke bawah -->
+        <Button fx:id="materiButton" layoutX="30.0" layoutY="280.0" prefHeight="80" prefWidth="200" style="-fx-background-color: #4682b4; -fx-text-fill: white; -fx-font-size: 16px;" text="📘 Materi" />
+
+        <Button fx:id="kuisButton" layoutX="290.0" layoutY="280.0" prefHeight="80" prefWidth="200" style="-fx-background-color: #4682b4; -fx-text-fill: white; -fx-font-size: 16px;" text="🧠 Kuis" />
+
+        <Button fx:id="laporanButton" layoutX="550.0" layoutY="280.0" prefHeight="80" prefWidth="200" style="-fx-background-color: #4682b4; -fx-text-fill: white; -fx-font-size: 16px;" text="📊 Laporan" />
+
+    </children>
+</AnchorPane>

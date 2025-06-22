@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="uaspbo1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/itextpdf-5.5.13.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mysql-connector-j-8.0.31-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/uaspbo.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

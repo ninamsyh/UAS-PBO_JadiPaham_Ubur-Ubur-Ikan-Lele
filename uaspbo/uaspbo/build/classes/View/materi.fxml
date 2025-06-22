@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="Controller.MateriController"
+            prefWidth="800" prefHeight="600"
+            style="-fx-background-color: #f0f8ff;">
+
+    <children>
+        <Label text="Kelola Materi"
+               layoutX="30" layoutY="20"
+               style="-fx-font-size: 24px; -fx-text-fill: #4682b4;" />
+
+        <Button fx:id="btnBack" text="Kembali"
+                layoutX="700" layoutY="20"
+                onAction="#handleBack"
+                style="-fx-background-color: transparent; -fx-text-fill: #4682b4;" />
+
+        <TableView fx:id="materiTable"
+                   layoutX="30" layoutY="70"
+                   prefWidth="740" prefHeight="250">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="colTitle" text="Judul" prefWidth="200"/>
+                <TableColumn fx:id="colDescription" text="Deskripsi" prefWidth="300"/>
+                <TableColumn fx:id="colFilePath" text="File" prefWidth="170"/>
+            </columns>
+        </TableView>
+
+        <Label text="Judul:" layoutX="30" layoutY="340"/>
+        <TextField fx:id="titleField" layoutX="100" layoutY="335" prefWidth="300"/>
+
+        <Label text="Deskripsi:" layoutX="30" layoutY="380"/>
+        <TextField fx:id="descriptionField" layoutX="100" layoutY="375" prefWidth="500"/>
+
+        <Label text="File:" layoutX="30" layoutY="420"/>
+        <TextField fx:id="filePathField" layoutX="100" layoutY="415" prefWidth="400" editable="false"/>
+        <Button text="Browse" layoutX="510" layoutY="415" onAction="#handleBrowseFile"
+                style="-fx-background-color: #4682b4; -fx-text-fill: white;"/>
+
+        <Button text="Tambah" layoutX="100" layoutY="470"
+                onAction="#handleAdd"
+                style="-fx-background-color: #4682b4; -fx-text-fill: white;"/>
+        <Button text="Edit" layoutX="180" layoutY="470"
+                onAction="#handleEdit"
+                style="-fx-background-color: #4682b4; -fx-text-fill: white;"/>
+        <Button text="Hapus" layoutX="260" layoutY="470"
+                onAction="#handleDelete"
+                style="-fx-background-color: #4682b4; -fx-text-fill: white;"/>
+
+        <Label fx:id="statusLabel" layoutX="30" layoutY="530" textFill="red"/>
+    </children>
+</AnchorPane>

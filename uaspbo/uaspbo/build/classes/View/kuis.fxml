@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.KuisController">
+
+    <!-- Bagian Atas: Pilih Materi dan Tabel Soal -->
+    <top>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <HBox spacing="10">
+                <Label text="Pilih Materi:"/>
+                <ComboBox fx:id="materiComboBox"/>
+            </HBox>
+
+            <TableView fx:id="tabelSoal" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="colPertanyaan" text="Pertanyaan" prefWidth="250"/>
+                    <TableColumn fx:id="colJawaban" text="Jawaban Benar" prefWidth="100"/>
+                    <TableColumn fx:id="colAksi" text="Aksi" prefWidth="150"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </top>
+
+    <!-- Bagian Tengah: Form Tambah/Edit Soal -->
+    <center>
+        <TitledPane text="Tambah Soal" expanded="true" collapsible="false">
+            <content>
+                <VBox spacing="8">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+
+                    <TextField fx:id="pertanyaanField" promptText="Pertanyaan"/>
+                    <TextField fx:id="aField" promptText="Pilihan A"/>
+                    <TextField fx:id="bField" promptText="Pilihan B"/>
+                    <TextField fx:id="cField" promptText="Pilihan C"/>
+                    <TextField fx:id="dField" promptText="Pilihan D"/>
+                    <TextField fx:id="jawabanField" promptText="Jawaban Benar (A/B/C/D)"/>
+
+                    <!-- ✅ fx:id ditambahkan di sini -->
+                    <Button fx:id="tambahButton" text="Tambah Soal" onAction="#tambahSoal"/>
+                </VBox>
+            </content>
+        </TitledPane>
+    </center>
+
+</BorderPane>

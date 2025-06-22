@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600" prefWidth="800" style="-fx-background-color: #f0f8ff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashboardController">
+    <children>
+        <Label layoutX="30.0" layoutY="20.0" style="-fx-font-size: 26px; -fx-text-fill: #4682b4;" text="Dashboard" />
+
+        <!-- Foto Profil -->
+        <ImageView fx:id="profileImage" fitHeight="40" fitWidth="40" layoutX="180" layoutY="15" pickOnBounds="true" style="-fx-background-radius: 20; -fx-effect: dropshadow(gaussian, gray, 2, 0.2, 0, 1);" />
+
+        <!-- Siswa dan Admin -->
+        <Button fx:id="materiButton" layoutX="30.0" layoutY="347.0" prefHeight="100" prefWidth="200" style="-fx-background-color: #4682b4; -fx-text-fill: white; -fx-font-size: 16px;" text="📘 Materi" />
+
+        <Button fx:id="kuisButton" layoutX="260.0" layoutY="347.0" prefHeight="100" prefWidth="200" style="-fx-background-color: #4682b4; -fx-text-fill: white; -fx-font-size: 16px;" text="🧠 Kuis" />
+
+        <Button fx:id="laporanButton" layoutX="490.0" layoutY="347.0" prefHeight="100" prefWidth="200" style="-fx-background-color: #4682b4; -fx-text-fill: white; -fx-font-size: 16px;" text="📊 Laporan" />
+
+        <!-- Admin Only -->
+        <Button fx:id="crudMateriButton" layoutX="30.0" layoutY="80.0" prefHeight="60" prefWidth="200" style="-fx-background-color: #4682b4; -fx-text-fill: white;" text="📝 Kelola Materi" />
+
+        <Button fx:id="crudKuisButton" layoutX="260.0" layoutY="80.0" prefHeight="60" prefWidth="200" style="-fx-background-color: #4682b4; -fx-text-fill: white;" text="📋 Kelola Kuis" />
+
+        <Button fx:id="crudSiswaButton" layoutX="490.0" layoutY="80.0" prefHeight="60" prefWidth="200" style="-fx-background-color: #4682b4; -fx-text-fill: white;" text="👥 Kelola Siswa" />
+
+        <!-- ✅ Tambahan tombol Laporan Aktivitas (Admin Only) -->
+        <Button fx:id="laporanAktivitasButton" layoutX="260.0" layoutY="185.0" prefHeight="40" prefWidth="200" style="-fx-background-color: #4682b4; -fx-text-fill: white;" text="📈 Laporan Aktivitas" />
+
+        <!-- Tombol Backup Data -->
+        <Button fx:id="backupButton" layoutX="30.0" layoutY="185.0" prefHeight="40" prefWidth="200" style="-fx-background-color: #32CD32; -fx-text-fill: white;" text="⬆️ Backup Data" />
+
+        <!-- Tombol Restore Data -->
+        <Button fx:id="restoreButton" layoutX="490.0" layoutY="185.0" prefHeight="40" prefWidth="200" style="-fx-background-color: #FFA500; -fx-text-fill: white;" text="⬇️ Restore Data" />
+
+        <!-- Logout -->
+        <Button fx:id="logoutButton" layoutX="680" layoutY="20" style="-fx-background-color: transparent; -fx-text-fill: #4682b4; -fx-font-weight: bold;" text="Keluar" />
+    </children>
+</AnchorPane>

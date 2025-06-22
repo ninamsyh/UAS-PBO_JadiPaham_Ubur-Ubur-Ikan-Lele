@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="Controller.PilihMateriController"
+      spacing="15" alignment="TOP_CENTER">
+
+    <padding>
+        <Insets top="20" right="30" bottom="20" left="30"/>
+    </padding>
+
+    <!-- Tombol kembali ke dashboard -->
+    <HBox alignment="TOP_LEFT" prefWidth="400">
+        <Button fx:id="kembaliButton" text="← Kembali ke Dashboard" onAction="#kembaliKeDashboard"/>
+    </HBox>
+
+    <!-- Judul halaman -->
+    <Label text="Pilih Materi Kuis"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <Label text="Silakan pilih materi yang ingin Anda kerjakan:"
+           style="-fx-font-size: 14px;" />
+
+    <!-- Daftar tombol materi akan dimasukkan ke sini -->
+    <VBox fx:id="daftarMateriVBox" spacing="10" prefWidth="400"/>
+
+</VBox>

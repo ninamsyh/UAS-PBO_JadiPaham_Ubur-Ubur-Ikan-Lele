@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="Controller.MateriSiswaController"
+            prefWidth="800" prefHeight="600"
+            style="-fx-background-color: #f0f8ff;">
+
+    <children>
+        <Label text="Daftar Materi Pembelajaran"
+               layoutX="30" layoutY="20"
+               style="-fx-font-size: 24px; -fx-text-fill: #4682b4;" />
+
+        <Button fx:id="btnBack" text="Kembali"
+                layoutX="700" layoutY="20"
+                onAction="#handleBack"
+                style="-fx-background-color: transparent; -fx-text-fill: #4682b4;" />
+
+        <TableView fx:id="materiTable" layoutX="30" layoutY="70" prefWidth="740" prefHeight="450">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="colTitle" text="Judul" prefWidth="250"/>
+                <TableColumn fx:id="colDescription" text="Deskripsi" prefWidth="420"/>
+                <TableColumn fx:id="colFile" text="File" prefWidth="100"/>
+
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

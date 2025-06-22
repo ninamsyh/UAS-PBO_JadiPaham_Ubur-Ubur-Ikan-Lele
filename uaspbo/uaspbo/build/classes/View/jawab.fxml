@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.JawabController">
+
+    <center>
+        <VBox spacing="12" alignment="TOP_LEFT">
+            <padding>
+                <Insets top="20" right="30" bottom="20" left="30"/>
+            </padding>
+
+            <Label fx:id="labelPertanyaan" style="-fx-font-size: 16px; -fx-font-weight: bold;" wrapText="true"/>
+
+            <VBox spacing="10">
+                <RadioButton fx:id="radioA" wrapText="true"/>
+                <RadioButton fx:id="radioB" wrapText="true"/>
+                <RadioButton fx:id="radioC" wrapText="true"/>
+                <RadioButton fx:id="radioD" wrapText="true"/>
+            </VBox>
+
+            <Button fx:id="kirimButton" text="Kirim Jawaban"
+                    onAction="#kirimJawaban"
+                    style="-fx-font-size: 14px; -fx-background-color: #4682B4; -fx-text-fill: white;"/>
+        </VBox>
+    </center>
+</BorderPane>
